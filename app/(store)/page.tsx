@@ -1,10 +1,12 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { getAllProducts } from "@/sanity/lib/products/getAllProduct";
 
-export default function Home() {
+export default async function Home() {
+
+  const products = await getAllProducts();
+
   return (
     <div className="">
- 
+      {/* render all the products */}
     </div>
   );
 }
